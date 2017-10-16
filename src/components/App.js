@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import '../styles/App.css';
-import ReactDOM from 'react-dom'
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Baselayout from '../components/Baselayout';
 import TourStop from '../components/TourStop';
@@ -16,6 +15,7 @@ class App extends Component{
           <Switch>
             <Route exact path = "/" component={Home}/>
             <Route path = "/tour" component={TourHome}/>
+            <Route path = "/stop" component={TourStop}/>
           </Switch>
         </Baselayout>
         </BrowserRouter>
