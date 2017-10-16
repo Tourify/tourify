@@ -15,7 +15,7 @@ export default class TourStop extends React.Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:3000/organizations/1/tours/1/stops/1').then(results =>{
+    fetch('https://evening-retreat-85270.herokuapp.com/organizations/1/tours/1/stops/1/').then(results =>{
       return results.json();
     }).then(data =>{
       this.setState({
@@ -41,7 +41,7 @@ handleClick(e){
       <div>
         <div className = 'tourstop-main-photo'>
           <button className = 'photo-change-btn' onClick={this.handleClick}>More Photos</button>
-          <img src = {this.state.currentSource}/>
+          <img src = {this.state.currentSource} alt = "current"/>
         </div>
         <div className = "tourstop-header-text">
           <h1>{this.state.tourInfo.name}</h1>
@@ -58,9 +58,9 @@ handleClick(e){
             <h2>{this.state.tourInfo.travel_tip}</h2>
           </div>
           <div className = "tourstop-footer-links">
-            <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow.png"/>
+            <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow.png" alt = "left arrow"/>
             <a href = "">TOUR HOME</a>
-            <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow-right.png"/>
+            <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow-right.png" alt = "right arrow"/>
           </div>
         </div>
         </div>
