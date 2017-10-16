@@ -1,6 +1,6 @@
 
 body{
-  margin: 0!important;
+  margin: 0;
   font-family: 'Lato', sans-serif;
   min-width: 300px;
 }
@@ -23,7 +23,7 @@ footer{
   position: absolute;
 }
 
-// tour stop //
+/* tour stop */
 
 .tourstop-body{
   width: 80vw;
@@ -192,8 +192,8 @@ footer{
   text-decoration: none;
 }
 
-// main tour page //
-@media screen and (min-width: 375px){
+/* main tour page */
+@media screen and (min-width: 300px){
   .tour-main-photo{
     height: 700px;
     background-image: url('https://static1.squarespace.com/static/56eff436c2ea5144e9b6dce0/5861b28bbe6594106ff76705/5861b2aa03596eeb527fe719/1482883865229/Downtown-Durham-NC.jpg');
