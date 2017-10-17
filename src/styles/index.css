@@ -12,10 +12,11 @@ nav{
   position: absolute;
 }
 
-nav img{
+/*Tourify logo*/
+/*nav img{
   margin-top: 15px;
   width: 200px;
-}
+}*/
 
 footer{
   width: 100%;
@@ -27,6 +28,7 @@ footer{
 
 .tourstop-body{
   width: 80vw;
+  max-width: 800px;
   margin: 0 auto;
   text-align:justify;
   color: #777879;
@@ -40,16 +42,27 @@ footer{
   margin-bottom: 40px;
   overflow: hidden;
   background: gray;
-}
+}*/
 
 .photo-change-btn{
   position: absolute;
   margin-left: 85vw;
   margin-top: 20vh;
+  background: #E34008;
+  border-radius: 50%;
+  border: none;
+  height: 50px;
+  width: 50px;
+  color: white;
+}
+
+.photo-change-btn:focus {
+  outline: none;
 }
 
 .tourstop-header-text{
   width: 80vw;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -58,6 +71,8 @@ footer{
   color: #E34008;
   font-size: 45px;
   padding-bottom: 0;
+  /*border: 1px solid red;*/
+  /*margin: 5px;*/
 }
 
 .tourstop-header-text p {
@@ -74,8 +89,9 @@ footer{
   align-items: center;
   margin: 0 auto;
   color: #E34008;
-  font-size: 35px;
+  /*font-size: 35px;*/
   width: 80vw;
+  max-width: 800px;
 }
 
 .tourstop-header-links img{
@@ -90,18 +106,27 @@ footer{
 
 .tourstop-travel-tip{
   background-color: lightgrey;
-  margin-top: 40px;
+  /*margin-top: 40px;*/
   display: flex;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
-  padding: 15px;
-  line-height: 1.1;
+  max-width: 800px;
+  /*align-items: center;*/
+  /*line-height: 1.1;*/
 }
 
-.tourstop-travel-tip h2{
-  padding: 30px;
-  line-height: 1.1;
-  font-size: 28px;
+.tourstop-travel-tip h2 {
+  font-size: 16px;
+  text-align: center;
+  color: #E34008;
+  margin: 10px;
+  letter-spacing: 5px;
+}
+.tourstop-travel-tip p{
+  /*padding: 30px;*/
+  /*line-height: 1.1;*/
+  font-size: 16px;
 }
 
 .tour-map{
@@ -118,7 +143,7 @@ footer{
   display: flex;
   flex-direction: column;
   min-width: 300px;
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
   /*justify-content: center;*/
   /*align-content: center;*/
@@ -181,6 +206,7 @@ footer{
 
 .tourstop-footer-links{
   width: 80vw;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -294,6 +320,24 @@ footer{
   background: gray;
 }
 
+.photo-change-btn{
+  position: absolute;
+  margin-left: 85vw;
+  margin-top: 150px;
+  background: #E34008;
+  border-radius: 50%;
+  border: none;
+  height: 50px;
+  width: 50px;
+  color: white;
+}
+
+.tourstop-main-photo img {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+}
+
 .tourstop-header-text{
   width: 80vw;
   margin: 0 auto;
@@ -319,8 +363,9 @@ footer{
   height: 35px;
 }
 
-.tourstop-header-links p {
+.tourstop-header-links p, .tourstop-header-links a {
   font-size: 16px;
+  /*margin: 10px;*/
 }
 
 .tour-start-button {
@@ -399,6 +444,46 @@ footer{
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/*-------Stop Page Styles--------*/
+
+.tourstop-location {
+  margin: 5px;
+}
+
+.tourstop-travel-tip{
+  /*background-color: lightgrey;*/
+  width: 100%;
+  margin: 0 auto;
+  /*display: flex;
+  align-content: center;
+  justify-content: center;*/
+  /*padding: 15px;
+  line-height: 1.1;*/
+}
+
+.tourstop-travel-tip p{
+  padding: 0 15px;
+  line-height: 1.1;
+  font-size: 16px;
+  margin: 0 0 15px 0;
+}
+
+.tourstop-footer-links{
+  width: 80vw;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  /*margin-top: 20px;*/
+  /*margin-bottom: 20px;*/
+  align-items: center;
+  font-size: 18px;
+}
+
+.tourstop-footer-links img {
+  height: 50px;
+}
+
 }
 
 /*------------TABLET SIZING------------*/
@@ -434,6 +519,12 @@ footer{
       background: gray;
     }
 
+    .tourstop-main-photo img {
+      object-fit: cover;
+      width: 100%;
+      height: 250px;
+    }
+
     .tour-map{
       /*width: 100vh;*/
       height: 250px;
@@ -443,7 +534,20 @@ footer{
       color: white;
       font-size: 20px;
     }
+    /*--------Stop Page Styles-------*/
+    .photo-change-btn{
+      position: absolute;
+      margin-left: 85vw;
+      margin-top: 225px;
+      /*background: #E34008;
+      border-radius: 50%;
+      border: none;
+      height: 50px;
+      width: 50px;
+      color: white;*/
+    }
   }
+
 
 
 
@@ -500,6 +604,12 @@ footer{
     background: gray;
   }
 
+  .tourstop-main-photo img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+  }
+
   .tour-map{
     /*width: 100vh;*/
     height: 300px;
@@ -533,4 +643,21 @@ footer{
   .tourstop-header-links p {
     font-size: 18px;
   }
+
+  /*--------Stop Page Styles-------*/
+  .photo-change-btn{
+    position: absolute;
+    margin-left: 85vw;
+    margin-top: 275px;
+    /*background: #E34008;
+    border-radius: 50%;
+    border: none;
+    height: 50px;
+    width: 50px;
+    color: white;*/
+  }
+
+  /*.tourstop-body-text {
+    max-width: 500px;
+  }*/
 }
