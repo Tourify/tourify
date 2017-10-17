@@ -1,5 +1,5 @@
 import React from "react";
-
+import Map from "../components/Map.js";
 export default class TourHome extends React.Component {
   constructor(props){
     super(props);
@@ -39,7 +39,7 @@ export default class TourHome extends React.Component {
             <p> {this.state.numStops} stops | {this.state.tourInfo.distance} miles | {this.state.tourInfo.time_in_mins} mins</p>
           </div>
 
-          <div className= "tour-map">Map</div>
+          <div className= "tour-map"><Map/></div>
 
           <div className= "tour-list">
             <button className= "tour-start-button">START TOUR</button>
