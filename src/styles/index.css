@@ -234,6 +234,8 @@ footer{
     margin-top: 80px;
     font-size: 14px;
     font-style: italic;
+    padding: 0 10px;
+    font-weight: 300;
   }
 
   .select-a-tour{
@@ -245,7 +247,7 @@ footer{
   .tours-wrapper{
     display: flex;
     justify-content: center;
-    width: 75vw;
+    width: 85vw;
     flex-wrap: wrap;
     margin: 0 auto;
   }
@@ -253,7 +255,7 @@ footer{
   .tour-item{
     width: 120px;
     /*height: 180px;*/
-    margin: 5px 10px;
+    margin: 5px 5px;
     border: solid 1px transparent;
     opacity: .7;
   }
@@ -282,11 +284,40 @@ footer{
     height: 120px;
     background-color: lightgrey;
   }
-
-  @media screen and (min-width: 600px){
-
-  }
 }
+
+  @media screen and (min-width: 450px){
+    .tours-wrapper{
+      display: flex;
+      justify-content: center;
+      width: 85vw;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+
+    .tour-item{
+      width: 150px;
+      /*height: 180px;*/
+      margin: 10px;
+      border: solid 1px transparent;
+      opacity: .7;
+    }
+
+    .tour-item-text p{
+      text-align: center;
+      color: #777879;
+      font-size: 16px;
+      padding: 5px;
+      /*width: 25vw;
+      margin: 0 auto;*/
+    }
+
+    .tour-item-photo{
+      width: 150px;
+      height: 150px;
+      background-color: lightgrey;
+    }
+  }
 
 @media screen and (min-width: 1000px){
 
@@ -305,7 +336,7 @@ footer{
 
   .tours-wrapper{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 85vw;
     max-width: 85vw;
     /*flex-wrap: wrap;*/
@@ -313,19 +344,17 @@ footer{
   }
 
   .tour-item{
-    width: 20vw;
-    height: 35vh;
-    /*margin-bottom: 35px;
-    border: solid 1px transparent;
-    opacity: .7;*/
+    width: 200px;
+    /*height: 180px;*/
+    margin: 10px;
+    /*border: solid 1px transparent;*/
+    /*opacity: .7;*/
   }
 
-  .tour-item-text p{
-    /*text-align: center;
-    color: $accent-color;*/
-    font-size: 24px;
-    width: 20vw;
-    /*margin: 0 auto;*/
+  .tour-item-photo{
+    width: 200px;
+    height: 200px;
+    /*background-color: lightgrey;*/
   }
 
   .select-a-tour{
@@ -346,7 +375,7 @@ footer{
   .tour-main-photo p{
     /*text-align: center;
     color: white;*/
-    margin-top: 50px;
+    margin-top: 60px;
     font-size: 18px;
     font-style: italic;
   }
