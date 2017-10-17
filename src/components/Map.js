@@ -8,16 +8,9 @@ const STOP_ONE_POSITION = {
   lng: -78.9018154
 }
 
-const STOP_EIGHT_POSITION = {
-  lat: 35.9972665,
-  lng: -78.9035641
-}
-
 export default class Map extends React.Component {
   constructor() {
     super();
-    this.panToStopOne = this.panToStopOne.bind(this);
-    this.panToStopEight = this.panToStopEight.bind(this);
   }
 
   componentDidMount() {
@@ -25,17 +18,7 @@ export default class Map extends React.Component {
       center: STOP_ONE_POSITION,
       zoom: 15
     });
-
   }
-
-  panToStopOne() {
-    this.map.panTo(STOP_ONE_POSITION);
-  }
-
-  panToStopEight(){
-    this.map.panTo(STOP_EIGHT_POSITION);
-  }
-
 
   render() {
     const mapStyle = {
@@ -47,11 +30,7 @@ export default class Map extends React.Component {
 
     return (
       <div>
-
-
         <div ref="map" style={mapStyle}>I should be a map!</div>
-        <button onClick={this.panToStopOne}>Go to Stop One!</button>
-        <button onClick={this.panToStopEight}>Go to Stop Eight!</button>
       </div>
     );
   }
