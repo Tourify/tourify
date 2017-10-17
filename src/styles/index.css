@@ -14,7 +14,7 @@ nav{
 
 nav img{
   margin-top: 15px;
-  width: 300px;
+  width: 200px;
 }
 
 footer{
@@ -71,7 +71,7 @@ footer{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   margin: 0 auto;
   color: #E34008;
   font-size: 35px;
@@ -111,14 +111,17 @@ footer{
   background: lightgray;
   text-align: center;
   color: white;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 .tour-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  min-width: 300px;
+  max-width: 1000px;
+  margin: 0 auto;
+  /*justify-content: center;*/
+  /*align-content: center;*/
 }
 
 .tour-start-button {
@@ -192,13 +195,16 @@ footer{
   text-decoration: none;
 }
 
-/*main tour page*/
+/*---------MOBILE SIZING------------*/
 @media screen and (min-width: 300px){
 
+/*Logo*/
   nav img{
     margin-top: 15px;
     width: 150px;
   }
+
+  /*---------Home Page Styles: Mobile----------*/
 
   .tour-main-photo{
     height: 350px;
@@ -231,7 +237,7 @@ footer{
   .tour-main-photo p{
     text-align: center;
     color: white;
-    margin-top: 80px;
+    margin-top: 70px;
     font-size: 14px;
     font-style: italic;
     padding: 0 10px;
@@ -254,7 +260,6 @@ footer{
 
   .tour-item{
     width: 120px;
-    /*height: 180px;*/
     margin: 5px 5px;
     border: solid 1px transparent;
     opacity: .7;
@@ -266,17 +271,11 @@ footer{
     cursor: pointer;
   }
 
-  .tour-item-text{
-    /*padding: 20px;*/
-  }
-
   .tour-item-text p{
     text-align: center;
     color: #777879;
     font-size: 16px;
     padding: 5px;
-    /*width: 25vw;
-    margin: 0 auto;*/
   }
 
   .tour-item-photo{
@@ -284,99 +283,254 @@ footer{
     height: 120px;
     background-color: lightgrey;
   }
+
+/*-------Tour Page Styles: Mobile-------*/
+
+.tourstop-main-photo{
+  width: 100%;
+  height: 180px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: gray;
 }
 
+.tourstop-header-text{
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.tourstop-header-text h1{
+  text-align: center;
+  color: #E34008;
+  font-size: 25px;
+  /*padding-bottom: 0;*/
+}
+
+.tourstop-header-text p {
+  text-align: center;
+  color: #777879;
+  font-size: 15px;
+  margin: 0;
+  /*padding-bottom: 0;*/
+}
+
+/*Tourify Icon*/
+.tourstop-header-links img{
+  height: 35px;
+}
+
+.tourstop-header-links p {
+  font-size: 16px;
+}
+
+.tour-start-button {
+  /* text-align: center; */
+  font-size: 16px;
+  /*font-weight: 300;
+  letter-spacing: 2px;*/
+  margin: 20px auto;
+  /*color: white;
+  background: #E34008;*/
+  padding: 10px 10px;
+  width: 160px;
+  /*border-radius: 50px;
+  border: none;*/
+  /*width: 400px;*/
+}
+
+.tour-map{
+  /*width: 100vh;*/
+  height: 180px;
+  overflow: hidden;
+  background: lightgray;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.tour-stop-preview {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /*align-items: center;*/
+  margin: 10px 20px;
+  height: 100px;
+}
+
+.tour-stop-image {
+  /*height: 100px;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  /*object-fit: cover;*/
+  /*object-position: center;*/
+  background: #E34008;
+  /*overflow: hidden;*/
+}
+
+.tour-stop-image img {
+  /*object-position: center;*/
+  /*height: 100px;*/
+  /*width: 100%;*/
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+}
+
+.tour-stop-text {
+  /*width: 70%;*/
+  display: flex;
+  flex-direction: column;
+  background: lightgrey;
+}
+
+.tour-stop-preview h1 {
+  color: #E34008;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.tour-stop-preview p {
+  font-weight: 300;
+  font-size: 16px ;
+  margin: 5px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+}
+
+/*------------TABLET SIZING------------*/
   @media screen and (min-width: 450px){
+
+/*------Home Page Styles--------*/
     .tours-wrapper{
-      display: flex;
-      justify-content: center;
       width: 85vw;
-      flex-wrap: wrap;
-      margin: 0 auto;
     }
 
     .tour-item{
       width: 150px;
-      /*height: 180px;*/
       margin: 10px;
-      border: solid 1px transparent;
-      opacity: .7;
     }
 
     .tour-item-text p{
-      text-align: center;
-      color: #777879;
       font-size: 16px;
       padding: 5px;
-      /*width: 25vw;
-      margin: 0 auto;*/
     }
 
     .tour-item-photo{
       width: 150px;
       height: 150px;
-      background-color: lightgrey;
+    }
+
+    /*--------Tour Page Styles--------*/
+
+    .tourstop-main-photo{
+      width: 100%;
+      height: 250px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      background: gray;
+    }
+
+    .tour-map{
+      /*width: 100vh;*/
+      height: 250px;
+      overflow: hidden;
+      background: lightgray;
+      text-align: center;
+      color: white;
+      font-size: 20px;
     }
   }
 
+
+
+/*------LAPTOP-DESKTOP SIZING--------*/
 @media screen and (min-width: 1000px){
 
-  nav img{
-    margin-top: 15px;
-    width: 200px;
-  }
-
+/*-------Home Page Styles-------*/
   .tour-main-photo{
     height: 400px;
-    /*// background-image: url('https://static1.squarespace.com/static/56eff436c2ea5144e9b6dce0/5861b28bbe6594106ff76705/5861b2aa03596eeb527fe719/1482883865229/Downtown-Durham-NC.jpg');
-    // // background-repeat: no-repeat;
-    // // background-size: cover;
-    // // background-position: center;*/
   }
 
   .tours-wrapper{
-    display: flex;
-    justify-content: center;
-    width: 85vw;
     max-width: 85vw;
-    /*flex-wrap: wrap;*/
-    margin: 0 auto;
   }
 
   .tour-item{
     width: 200px;
-    /*height: 180px;*/
     margin: 10px;
-    /*border: solid 1px transparent;*/
-    /*opacity: .7;*/
   }
 
   .tour-item-photo{
     width: 200px;
     height: 200px;
-    /*background-color: lightgrey;*/
   }
 
   .select-a-tour{
-    /*color: #E34008;
-    text-align: center;*/
     font-size: 30px;
   }
 
+/*Tour name*/
   .tour-main-text h1{
     font-size: 75px;
     margin: 20px;
   }
 
+/*Tour description*/
   .tour-main-text h2{
     font-size: 35px;
   }
 
+/*Tour credit*/
   .tour-main-photo p{
-    /*text-align: center;
-    color: white;*/
     margin-top: 60px;
     font-size: 18px;
-    font-style: italic;
+  }
+
+  /*--------Tour Page Styles--------*/
+
+  .tourstop-main-photo{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background: gray;
+  }
+
+  .tour-map{
+    /*width: 100vh;*/
+    height: 300px;
+    overflow: hidden;
+    background: lightgray;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+  }
+
+  .tourstop-header-text h1{
+    text-align: center;
+    color: #E34008;
+    font-size: 30px;
+    /*padding-bottom: 0;*/
+  }
+
+  .tourstop-header-text p {
+    text-align: center;
+    color: #777879;
+    font-size: 18px;
+    margin: 5px;
+    /*padding-bottom: 0;*/
+  }
+
+  /*Tourify Icon*/
+  .tourstop-header-links img{
+    height: 45px;
+  }
+
+  .tourstop-header-links p {
+    font-size: 18px;
   }
 }
