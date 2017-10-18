@@ -8,16 +8,45 @@ const STOP_ONE_POSITION = {
   lng: -78.9018154
 }
 
+const STOP_TWO_POSITION = {
+  lat: 35.9960212,
+  lng: -78.9028859
+}
+
+const STOP_THREE_POSITION = {
+  lat: 35.996318,
+  lng: -78.90239500000001
+}
+
 export default class Map extends React.Component {
   constructor() {
     super();
   }
 
   componentDidMount() {
-    this.map = new google.maps.Map(this.refs.map, {
+    let map = new google.maps.Map(this.refs.map, {
       center: STOP_ONE_POSITION,
-      zoom: 15
+      zoom: 16
     });
+
+    let markerOne = new google.maps.Marker({
+      position: STOP_ONE_POSITION,
+      label: "1"
+    });
+
+    let markerTwo = new google.maps.Marker({
+      position: STOP_TWO_POSITION,
+      label: "2"
+    });
+
+    let markerThree = new google.maps.Marker({
+      position: STOP_THREE_POSITION,
+      label: "3"
+    })
+
+    markerOne.setMap(map);
+    markerTwo.setMap(map);
+    markerThree.setMap(map);
   }
 
   render() {
