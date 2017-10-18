@@ -512,12 +512,25 @@ footer{
       margin: 10px;
     }
 
+    .tour-item-coming{
+      width: 150px;
+      margin: 10px;
+      /*border: solid 1px transparent;
+      opacity: .5;*/
+    }
+
     .tour-item-text p{
       font-size: 16px;
       padding: 5px;
     }
 
     .tour-item-photo{
+      width: 150px;
+      height: 150px;
+    }
+
+    .tour-item-photo img {
+      object-fit: cover;
       width: 150px;
       height: 150px;
     }
@@ -581,7 +594,20 @@ footer{
     margin: 10px;
   }
 
+  .tour-item-coming{
+    width: 200px;
+    margin: 10px;
+    /*border: solid 1px transparent;
+    opacity: .5;*/
+  }
+
   .tour-item-photo{
+    width: 200px;
+    height: 200px;
+  }
+
+  .tour-item-photo img {
+    object-fit: cover;
     width: 200px;
     height: 200px;
   }
