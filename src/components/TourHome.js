@@ -7,13 +7,14 @@ export default class TourHome extends React.Component {
     this.state = {
       tourInfo: [],
       numStops: "",
-      tourStops: []
+      tourStops: [],
+      id: props.match.params.id
     }
     this.componentDidMount = this.componentDidMount.bind(this);
   }
 
   componentDidMount(){
-    fetch('https://evening-retreat-85270.herokuapp.com/organizations/1/tours/1/').then(results =>{
+    fetch(`https://evening-retreat-85270.herokuapp.com/organizations/1/tours/${this.state.id}`).then(results =>{
       return results.json();
     }).then(data =>{
       this.setState({tourInfo: data});
@@ -21,7 +22,6 @@ export default class TourHome extends React.Component {
       this.setState({tourStops: data.stops})
     })
   }
-
 
   render(){
     console.log(this.state.tourStops)

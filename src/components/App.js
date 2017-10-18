@@ -14,7 +14,7 @@ class App extends Component{
           <Baselayout>
           <Switch>
             <Route exact path = "/" component={Home}/>
-            <Route path = "/tours" component={TourHome}/>
+            <Route path = "/tours/:id" component={TourHome}/>
             <Route path = "/stop" component={TourStop}/>
           </Switch>
         </Baselayout>
