@@ -25,6 +25,10 @@ footer{
   position: absolute;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*Link {
   text-decoration: none;
 }*/
@@ -476,14 +480,14 @@ footer{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 65%;
+  /*width: 50%;*/
 }
 
 .tour-stop-more {
   color: #E34008;
-  width: 35%;
+  /*width: %;*/
   text-align: right;
-  margin: 5px;
+  margin: 5px 10px;
   text-decoration: none;
   /*flex-wrap: nowrap;*/
 }
@@ -592,11 +596,11 @@ footer{
     }
 
     .tour-stop-para {
-      width: 75%;
+      /*width: 75%;*/
     }
 
     .tour-stop-more {
-      width: 25%;
+      /*width: 25%;*/
     }
     /*--------Stop Page Styles-------*/
     .photo-change-btn{
