@@ -24,7 +24,7 @@ export default class TourStop extends React.Component {
         tourInfo: data,
         defaultSource: data.image_current,
         currentSource: data.image_current,
-        stopSource: "https://jaredpattersonblog.files.wordpress.com/2017/10/trust-building_1955.jpg"
+        stopSource: data.image_historic
 
       });
     })
