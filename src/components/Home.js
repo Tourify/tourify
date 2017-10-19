@@ -56,7 +56,7 @@ export default class Home extends React.Component {
             <img src="https://jaredpattersonblog.files.wordpress.com/2017/10/civil_rights_mural_durham.jpg" alt="Civil Rights mural"/>
           </div>
           <div className = "tour-item-text">
-            <p>African-American Heritage</p>
+            <p>COMING SOON: <br/>African-American Heritage</p>
           </div>
         </div>
 
@@ -65,7 +65,7 @@ export default class Home extends React.Component {
             <img src="https://svcdn.simpleviewinc.com/v3/cache/www_durham-nc_com/B38250B45B38266972B2D54F09F558AB.jpg" alt="Durham Beer Scene"/>
           </div>
           <div className = "tour-item-text">
-          <p>Bull City Breweries</p>
+          <p>COMING SOON: <br/>Bull City Breweries</p>
         </div>
         </div>
 
@@ -74,7 +74,7 @@ export default class Home extends React.Component {
             <img src="https://static1.squarespace.com/static/57cd8e7759cc6804d18a84e1/t/57cd9ac93e00bed93bb4224a/1473092298075/durham+mural+2.jpg?format=2500w" alt="Durham Beer Scene"/>
           </div>
           <div className = "tour-item-text">
-            <p>Public Art Walk</p>
+            <p>COMING SOON: <br/>Public Art Walk</p>
           </div>
         </div>
       </div>

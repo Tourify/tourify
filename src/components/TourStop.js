@@ -6,6 +6,7 @@ export default class TourStop extends React.Component {
     super(props);
     this.state = {
       tourInfo: [],
+      id: props.match.params.id,
       defaultSource: "",
       stopSource: "",
       currentSource: ""
@@ -16,7 +17,7 @@ export default class TourStop extends React.Component {
   }
 
   componentDidMount(){
-    fetch('https://evening-retreat-85270.herokuapp.com/organizations/1/tours/1/stops/1/').then(results =>{
+    fetch(`https://evening-retreat-85270.herokuapp.com/organizations/1/tours/1/stops/${this.state.id}`).then(results =>{
       return results.json();
     }).then(data =>{
       this.setState({

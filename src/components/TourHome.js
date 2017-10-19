@@ -1,5 +1,6 @@
 import React from "react";
 import Map from "../components/Map.js";
+import {Link} from 'react-router-dom';
 export default class TourHome extends React.Component {
   constructor(props){
     super(props);
@@ -48,7 +49,12 @@ export default class TourHome extends React.Component {
                 <div className="tour-stop-image"><img src={stop.image_current} alt={stop.name}/></div>
                 <div className="tour-stop-text">
                   <h1>{stop.stop_num}. {stop.name}</h1>
-                  <p>{stop.description}</p>
+                  <div className="tour-stop-description">
+                    <p className="tour-stop-para">{stop.description}</p>
+                    <Link to={`/stop/${stop.stop_num}`}>
+                      <p className="tour-stop-more">MORE ></p>
+                    </Link>
+                  </div>
                 </div>
               </div>
             })}

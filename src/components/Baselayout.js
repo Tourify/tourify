@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 export default class Baselayout extends React.Component {
 
@@ -6,7 +7,11 @@ export default class Baselayout extends React.Component {
 
     return(
       <div>
-        <nav><img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-logo-200px.png" alt = "tourify logo"/></nav>
+        <nav>
+          <Link to={"/"}>
+            <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-logo-logo-bkgrd.png" alt = "tourify logo"/>
+          </Link>
+        </nav>
           {this.props.children}
         <footer></footer>
       </div>

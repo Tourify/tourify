@@ -9,6 +9,7 @@ nav{
   width: 100%;
   background-color: transparent;
   top:0;
+  left: -5px;
   position: absolute;
 }
 
@@ -23,6 +24,10 @@ footer{
   bottom: 0;
   position: absolute;
 }
+
+/*Link {
+  text-decoration: none;
+}*/
 
 /* tour stop */
 
@@ -195,14 +200,29 @@ footer{
   margin: 20px;
 }
 
-.tour-stop-preview p {
+.tour-stop-description {
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-between;*/
+  /*flex-wrap: nowrap;*/
+  /*align-content: flex-start;*/
+  /*align-items: flex-start;*/
+}
+
+/*.tour-stop-para {
   font-weight: 300;
   font-size: 40px ;
   margin: 20px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 70%;
 }
+
+.tour-stop-more {
+  color: #E34008;
+  width: 20%;
+}*/
 
 .tourstop-footer-links{
   width: 80vw;
@@ -227,7 +247,7 @@ footer{
 /*Logo*/
   nav img{
     margin-top: 15px;
-    width: 150px;
+    width: 120px;
   }
 
   /*---------Home Page Styles: Mobile----------*/
@@ -294,7 +314,7 @@ footer{
     width: 120px;
     margin: 5px 5px;
     border: solid 1px transparent;
-    opacity: .5;
+    opacity: .6;
   }
 
   .tour-item:hover{
@@ -449,13 +469,23 @@ footer{
   margin: 10px;
 }
 
-.tour-stop-preview p {
+.tour-stop-para {
   font-weight: 300;
   font-size: 16px ;
   margin: 5px 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 65%;
+}
+
+.tour-stop-more {
+  color: #E34008;
+  width: 35%;
+  text-align: right;
+  margin: 5px;
+  text-decoration: none;
+  /*flex-wrap: nowrap;*/
 }
 
 /*-------Stop Page Styles--------*/
@@ -559,6 +589,14 @@ footer{
       text-align: center;
       color: white;
       font-size: 20px;
+    }
+
+    .tour-stop-para {
+      width: 75%;
+    }
+
+    .tour-stop-more {
+      width: 25%;
     }
     /*--------Stop Page Styles-------*/
     .photo-change-btn{
@@ -682,6 +720,15 @@ footer{
   .tourstop-header-links p {
     font-size: 18px;
   }
+
+  /*.tour-stop-para {
+    width: 90%;
+  }
+
+  .tour-stop-more {
+    color: #E34008;
+    width: 10%;
+  }*/
 
   /*--------Stop Page Styles-------*/
   .photo-change-btn{
