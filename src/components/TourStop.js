@@ -1,5 +1,6 @@
 import React from "react";
 import StopMap from '../components/StopMap';
+import {Link} from 'react-router-dom';
 
 export default class TourStop extends React.Component {
   constructor(props){
@@ -13,7 +14,6 @@ export default class TourStop extends React.Component {
         }
     this.componentDidMount = this.componentDidMount.bind(this);
     this.handleClick = this.handleClick.bind(this);
-
   }
 
   componentDidMount(){
@@ -24,8 +24,7 @@ export default class TourStop extends React.Component {
         tourInfo: data,
         defaultSource: data.image_current,
         currentSource: data.image_current,
-        stopSource: "https://jaredpattersonblog.files.wordpress.com/2017/10/trust-building_1955.jpg"
-
+        stopSource: data.image_historic
       });
     })
   }
@@ -42,31 +41,51 @@ handleClick(e){
     return(
       <div>
         <div className = 'tourstop-main-photo'>
-          <button className = 'photo-change-btn' onClick={this.handleClick}>Toggle Photo</button>
+          {
+            (this.state.stopSource === undefined || this.state.stopSource === null)
+            ? ""
+            : <button className = 'photo-change-btn' onClick={this.handleClick}>Toggle Photo</button>
+          }
           <img src = {this.state.currentSource} alt = "current"/>
         </div>
 
         <div className = "tourstop-header-text">
-          <h1>{this.state.tourInfo.name}</h1>
+          <h1>{this.state.tourInfo.stop_num}. {this.state.tourInfo.name}</h1>
         </div>
           <div className = "tourstop-header-links">
             <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-pin-100px.png" alt = "icon"/>
-            <p className="tourstop-location">{this.state.tourInfo.location} | <a href = {this.state.tourInfo.learn_more_URL}>Website</a></p>
+            <p className="tourstop-location">{this.state.tourInfo.location}</p>
+            {
+              (this.state.tourInfo.learn_more_URL === undefined || this.state.tourInfo.learn_more_URL === null)
+              ? ""
+              : <p>| <a href = {this.state.tourInfo.learn_more_URL}>Website</a></p>
+            }
           </div>
           <div className = "tourstop-body">
           <div className = "tourstop-body-text">
             <p>{this.state.tourInfo.description}</p>
           </div>
-          <div className = "tourstop-travel-tip">
-            <h2>TRAVEL TIP</h2>
-            <p>{this.state.tourInfo.travel_tip}</p>
-          </div>
+            {
+              (this.state.tourInfo.travel_tip === undefined || this.state.tourInfo.travel_tip === null)
+              ? ""
+              :
+            <div className = "tourstop-travel-tip">
+              <h2>TRAVEL TIP</h2>
+              <p>{this.state.tourInfo.travel_tip}</p>
+            </div>
+            }
           <div className = "tourstop-map">
             <StopMap/>
           </div>
           <div className = "tourstop-footer-links">
-            <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow.png" alt = "left arrow"/>
-            <a href = "">TOUR HOME</a>
+            {
+              (parseInt(this.state.id) <= 1)
+              ? <img src=""/>
+              : <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow.png" alt = "left arrow"/>
+            }
+            <Link to={"/tours/1"}>
+              <a href = "">TOUR HOME</a>
+            </Link>
             <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow-right.png" alt = "right arrow"/>
           </div>
         </div>
