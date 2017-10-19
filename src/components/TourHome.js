@@ -52,7 +52,7 @@ export default class TourHome extends React.Component {
                   <div className="tour-stop-description">
                     <p className="tour-stop-para">{stop.description}</p>
                     <Link to={`/stop/${stop.stop_num}`}>
-                      <p className="tour-stop-more">MORE ></p>
+                      <p className="tour-stop-more">MORE></p>
                     </Link>
                   </div>
                 </div>
