@@ -1,8 +1,9 @@
 
-body{
+html, body{
   margin: 0;
   font-family: 'Lato', sans-serif;
   min-width: 300px;
+  height: 100%;
 }
 
 nav{
@@ -158,8 +159,12 @@ a {
   /*align-content: center;*/
 }
 
+.tour-list a {
+  color: white;
+}
+
 .tour-start-button {
-  /* text-align: center; */
+   /*text-align: center; */
   font-size: 45px;
   font-weight: 300;
   letter-spacing: 2px;
@@ -231,13 +236,17 @@ a {
 .tourstop-footer-links{
   width: 80vw;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
+  padding: 10px 0;
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
   margin-bottom: 50px;
   align-items: center;
   font-size: 35px;
+  position: fixed;
+  bottom: -23px;
+  background: white;
 }
 
 .tourstop-footer-links a{
@@ -516,6 +525,11 @@ a {
   margin: 0 0 15px 0;
 }
 
+.tourstop-map {
+  margin-bottom: 100px;
+  /*border: 1px solid red;*/
+}
+
 .tourstop-footer-links{
   width: 80vw;
   margin: 20px auto;
@@ -525,6 +539,9 @@ a {
   /*margin-bottom: 20px;*/
   align-items: center;
   font-size: 18px;
+  -webkit-box-shadow: 0px -7px 25px -5px rgba(0,0,0,0.28);
+  -moz-box-shadow: 0px -7px 25px -5px rgba(0,0,0,0.28);
+  box-shadow: 0px -7px 25px -5px rgba(0,0,0,0.28);
 }
 
 .tourstop-footer-links img {
