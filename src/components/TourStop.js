@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import StopMap from '../components/StopMap';
 
 export default class TourStop extends React.Component {
   constructor(props){
@@ -60,6 +60,9 @@ handleClick(e){
           <div className = "tourstop-travel-tip">
             <h2>TRAVEL TIP</h2>
             <p>{this.state.tourInfo.travel_tip}</p>
+          </div>
+          <div className = "tourstop-map">
+            <StopMap/>
           </div>
           <div className = "tourstop-footer-links">
             <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow.png" alt = "left arrow"/>
