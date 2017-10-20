@@ -1,6 +1,7 @@
 import React from "react";
 import StopMap from '../components/StopMap';
 import {Link} from 'react-router-dom';
+import {browserHistory} from 'react-router-dom';
 
 
 
@@ -40,10 +41,44 @@ handleClick(e){
   }
 }
 
+goBack(e){
+  const idBack = (parseInt(this.state.id)-1);
+  fetch(`https://evening-retreat-85270.herokuapp.com/organizations/1/tours/1/stops/${idBack}`).then(results =>{
+    return results.json();
+  }).then(data =>{
+    this.setState({
+      tourInfo: data,
+      id: idBack,
+      defaultSource: data.image_current,
+      currentSource: data.image_current,
+      stopSource: data.image_historic,
+    });
+  })
+}
+
+goForward(e){
+  const idForward = (parseInt(this.state.id)+1);
+  fetch(`https://evening-retreat-85270.herokuapp.com/organizations/1/tours/1/stops/${idForward}`).then(results =>{
+    return results.json();
+  }).then(data =>{
+    this.setState({
+      tourInfo: data,
+      id: idForward,
+      defaultSource: data.image_current,
+      currentSource: data.image_current,
+      stopSource: data.image_historic,
+    });
+  })
+}
 
   render(){
-     const latitude = this.state.tourInfo.gps_lat
-     const longitude = this.state.tourInfo.gps_long
+    const latitude = this.state.tourInfo.gps_lat
+    const longitude = this.state.tourInfo.gps_long
+
+    const idBack = (parseInt(this.state.id)-1)
+    const idForward = (parseInt(this.state.id)+1)
+    console.log(this.state.id);
+
     return(
       <div>
 
@@ -85,13 +120,17 @@ handleClick(e){
             <StopMap latFromParent ={latitude} longFromParent ={longitude}/>
           </div>
           <div className = "tourstop-footer-links">
-            {
-              (parseInt(this.state.id) <= 1)
-              ? <img src=""/>
-              : <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow.png" alt = "left arrow"/>
-            }
+            <Link to={`/stop/${idBack}`} >
+              {
+                (parseInt(this.state.id) <= 1)
+                ? <img src=""/>
+                : <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow.png" alt = "left arrow" onClick={e => this.goBack(e)}/>
+              }
+            </Link>
             <Link to={`/tours/${this.state.tourInfo.tour_id}`}>TOUR HOME</Link>
-            <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow-right.png" alt = "right arrow"/>
+            <Link to={`/stop/${idForward}`}>
+              <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow-right.png" alt = "right arrow" onClick={e => this.goForward(e)}/>
+            </Link>
           </div>
         </div>
         </div>
