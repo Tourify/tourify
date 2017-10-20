@@ -25,7 +25,7 @@ export default class Home extends React.Component {
     console.log(this.state.tourList)
     return(
       <div>
-        <div className = "tour-main-photo">
+        <div className = "tour-main-photo" background-image={this.state.orgInfo.org_photo}>
           <div className = "tour-main-text">
             <div><h1>{this.state.orgInfo.display_name}</h1></div>
             <div><h2>{this.state.orgInfo.description}</h2></div>
