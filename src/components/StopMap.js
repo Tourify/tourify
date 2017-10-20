@@ -6,28 +6,34 @@ const google = window.google;
 export default class StopMap extends React.Component {
   constructor(props) {
     super(props);
-
-    this.componentDidMount = this.componentDidMount.bind(this);
-
-
+    this.componentDidUpdate = this.componentDidUpdate.bind(this);
   }
 
-  componentDidMount() {
-    console.log(this.props.datafromParent)
+
+
+  componentDidUpdate() {
     let map = new google.maps.Map(this.refs.map, {
-      center: {lat: 35.9959669, lng: -78.9018154},
+      center: {lat: this.props.latFromParent, lng: this.props.longFromParent},
       zoom: 17
     });
 
     let markerOne = new google.maps.Marker({
-      position: {lat: 35.9959669, lng: -78.9018154},
+      position: {lat: this.props.latFromParent, lng: this.props.longFromParent},
       label: "1"
     });
 
     markerOne.setMap(map);
   }
 
+
+  componentWillReceiveProps(){
+
+  }
+
+
   render() {
+    console.log(this.props.datafromParent)
+
     const mapStyle = {
       width: "100%",
       height: 200,

@@ -43,10 +43,10 @@ handleClick(e){
 
   render(){
      const latitude = this.state.tourInfo.gps_lat
-
+     const longitude = this.state.tourInfo.gps_long
     return(
       <div>
-        
+
         <div className = 'tourstop-main-photo'>
           {
             (this.state.stopSource === undefined || this.state.stopSource === null)
@@ -82,7 +82,7 @@ handleClick(e){
             </div>
             }
           <div className = "tourstop-map">
-            <StopMap datafromParent ={latitude}/>
+            <StopMap latFromParent ={latitude} longFromParent ={longitude}/>
           </div>
           <div className = "tourstop-footer-links">
             {
