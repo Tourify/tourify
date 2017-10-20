@@ -83,9 +83,7 @@ handleClick(e){
               ? <img src=""/>
               : <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow.png" alt = "left arrow"/>
             }
-            <Link to={"/tours/1"}>
-              <a href = "">TOUR HOME</a>
-            </Link>
+            <Link to={`/tours/${this.state.tourInfo.tour_id}`}>TOUR HOME</Link>
             <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow-right.png" alt = "right arrow"/>
           </div>
         </div>

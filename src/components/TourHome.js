@@ -50,18 +50,15 @@ export default class TourHome extends React.Component {
             </button>
 
             {this.state.tourStops.map( (stop) => {
-              return <div className= "tour-stop-preview" key={stop.stop_num}>
+              return <Link to={`/stop/${stop.stop_num}`} key={stop.stop_num} className="tour-stop-link-box">
+                <div className= "tour-stop-preview">
                 <div className="tour-stop-image"><img src={stop.image_current} alt={stop.name}/></div>
                 <div className="tour-stop-text">
                   <h1>{stop.stop_num}. {stop.name}</h1>
-                  <div className="tour-stop-description">
-                    <p className="tour-stop-para">{stop.description}</p>
-                    <Link to={`/stop/${stop.stop_num}`}>
-                      <p className="tour-stop-more">MORE></p>
-                    </Link>
-                  </div>
+                  <p className="tour-stop-para">{stop.description}</p>
                 </div>
               </div>
+              </Link>
             })}
           </div>
 
