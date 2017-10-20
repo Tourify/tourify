@@ -37,7 +37,15 @@ handleClick(e){
   }
 }
 
+goBack(e){
+  const idBack = (parseInt(this.state.id)-1);
+  this.setState({id: idBack});
+}
+
   render(){
+    const idBack = (parseInt(this.state.id)-1)
+    const idForward = (parseInt(this.state.id)+1)
+    console.log(idBack);
     return(
       <div>
         <div className = 'tourstop-main-photo'>
@@ -78,13 +86,17 @@ handleClick(e){
             <StopMap/>
           </div>
           <div className = "tourstop-footer-links">
-            {
-              (parseInt(this.state.id) <= 1)
-              ? <img src=""/>
-              : <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow.png" alt = "left arrow"/>
-            }
+            <Link to={`/stop/${idBack}`}>
+              {
+                (parseInt(this.state.id) <= 1)
+                ? <img src=""/>
+                : <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow.png" alt = "left arrow"/>
+              }
+            </Link>
             <Link to={`/tours/${this.state.tourInfo.tour_id}`}>TOUR HOME</Link>
-            <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow-right.png" alt = "right arrow"/>
+            <Link to={`/stop/${idForward}`}>
+              <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow-right.png" alt = "right arrow" onClick={e => this.goBack(e)}/>
+            </Link>
           </div>
         </div>
         </div>
