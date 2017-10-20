@@ -2,43 +2,38 @@ import React from 'react';
 
 const google = window.google;
 
-const STOP_ONE_POSITION = {
-  lat: 35.9959669,
-  lng: -78.9018154
-}
 
-const STOP_TWO_POSITION = {
-  lat: 35.9960212,
-  lng: -78.9028859
-}
-
-export default class Map extends React.Component {
-  constructor() {
-    super();
+export default class StopMap extends React.Component {
+  constructor(props) {
+    super(props);
+    this.componentDidUpdate = this.componentDidUpdate.bind(this);
   }
 
-  componentDidMount() {
+
+
+  componentDidUpdate() {
     let map = new google.maps.Map(this.refs.map, {
-      center: STOP_ONE_POSITION,
-      zoom: 17
+      center: {lat: this.props.latFromParent, lng: this.props.longFromParent},
+      zoom: 19
     });
 
     let markerOne = new google.maps.Marker({
-      position: STOP_ONE_POSITION,
-      label: "1"
+      position: {lat: this.props.latFromParent, lng: this.props.longFromParent},
+      label: this.props.stopFromParent
     });
-
-    let markerTwo = new google.maps.Marker({
-      position: STOP_TWO_POSITION,
-      label: "2"
-    });
-
 
     markerOne.setMap(map);
-    markerTwo.setMap(map);
   }
 
+
+  componentWillReceiveProps(){
+
+  }
+
+
   render() {
+    console.log(this.props.datafromParent)
+
     const mapStyle = {
       width: "100%",
       height: 200,
