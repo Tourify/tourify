@@ -14,12 +14,12 @@ export default class StopMap extends React.Component {
   componentDidUpdate() {
     let map = new google.maps.Map(this.refs.map, {
       center: {lat: this.props.latFromParent, lng: this.props.longFromParent},
-      zoom: 17
+      zoom: 19
     });
 
     let markerOne = new google.maps.Marker({
       position: {lat: this.props.latFromParent, lng: this.props.longFromParent},
-      label: "1"
+      label: this.props.stopFromParent
     });
 
     markerOne.setMap(map);
