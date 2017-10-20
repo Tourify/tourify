@@ -2,6 +2,8 @@ import React from "react";
 import StopMap from '../components/StopMap';
 import {Link} from 'react-router-dom';
 
+
+
 export default class TourStop extends React.Component {
   constructor(props){
     super(props);
@@ -10,7 +12,7 @@ export default class TourStop extends React.Component {
       id: props.match.params.id,
       defaultSource: "",
       stopSource: "",
-      currentSource: ""
+      currentSource: "",
         }
     this.componentDidMount = this.componentDidMount.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -24,8 +26,9 @@ export default class TourStop extends React.Component {
         tourInfo: data,
         defaultSource: data.image_current,
         currentSource: data.image_current,
-        stopSource: data.image_historic
+        stopSource: data.image_historic,
       });
+
     })
   }
 
@@ -37,9 +40,13 @@ handleClick(e){
   }
 }
 
+
   render(){
+     const latitude = this.state.tourInfo.gps_lat
+
     return(
       <div>
+        
         <div className = 'tourstop-main-photo'>
           {
             (this.state.stopSource === undefined || this.state.stopSource === null)
@@ -75,7 +82,7 @@ handleClick(e){
             </div>
             }
           <div className = "tourstop-map">
-            <StopMap/>
+            <StopMap datafromParent ={latitude}/>
           </div>
           <div className = "tourstop-footer-links">
             {
