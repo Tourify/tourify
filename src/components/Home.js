@@ -78,6 +78,10 @@ export default class Home extends React.Component {
           </div>
         </div>
       </div>
+      <div className="about-footer">
+        <img src="https://durhamdill.files.wordpress.com/2017/10/tourify-pin-100px.png" alt="Tourify Pin Icon"/>
+        <p>Tourify &copy; 2017 | <Link to="/about">About</Link></p>
+      </div>
     </div>
     )
   }

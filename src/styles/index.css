@@ -14,12 +14,6 @@ nav{
   position: absolute;
 }
 
-/*Tourify logo*/
-/*nav img{
-  margin-top: 15px;
-  width: 200px;
-}*/
-
 footer{
   width: 100%;
   bottom: 0;
@@ -29,12 +23,6 @@ footer{
 a {
   text-decoration: none;
 }
-
-/*Link {
-  text-decoration: none;
-}*/
-
-/* tour stop */
 
 .tourstop-body{
   width: 80vw;
@@ -52,7 +40,7 @@ a {
   margin-bottom: 40px;
   overflow: hidden;
   background: gray;
-}*/
+}
 
 .photo-change-btn{
   position: absolute;
@@ -81,8 +69,6 @@ a {
   color: #E34008;
   font-size: 45px;
   padding-bottom: 0;
-  /*border: 1px solid red;*/
-  /*margin: 5px;*/
 }
 
 .tourstop-header-text p {
@@ -99,7 +85,6 @@ a {
   align-items: center;
   margin: 0 auto;
   color: #E34008;
-  /*font-size: 35px;*/
   width: 80vw;
   max-width: 800px;
 }
@@ -116,14 +101,11 @@ a {
 
 .tourstop-travel-tip{
   background-color: lightgrey;
-  /*margin-top: 40px;*/
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   max-width: 800px;
-  /*align-items: center;*/
-  /*line-height: 1.1;*/
 }
 
 .tourstop-travel-tip h2 {
@@ -134,8 +116,6 @@ a {
   letter-spacing: 5px;
 }
 .tourstop-travel-tip p{
-  /*padding: 30px;*/
-  /*line-height: 1.1;*/
   font-size: 16px;
 }
 
@@ -155,8 +135,6 @@ a {
   min-width: 300px;
   max-width: 800px;
   margin: 0 auto;
-  /*justify-content: center;*/
-  /*align-content: center;*/
 }
 
 .tour-list a {
@@ -164,7 +142,6 @@ a {
 }
 
 .tour-start-button {
-   /*text-align: center; */
   font-size: 45px;
   font-weight: 300;
   letter-spacing: 2px;
@@ -212,26 +189,13 @@ a {
 .tour-stop-description {
   display: flex;
   flex-direction: row;
-  /*justify-content: space-between;*/
-  /*flex-wrap: nowrap;*/
-  /*align-content: flex-start;*/
-  /*align-items: flex-start;*/
 }
 
-/*.tour-stop-para {
-  font-weight: 300;
-  font-size: 40px ;
-  margin: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 70%;
-}
 
 .tour-stop-more {
   color: #E34008;
   width: 20%;
-}*/
+}
 
 .tourstop-footer-links{
   width: 80vw;
@@ -252,6 +216,7 @@ a {
 .tourstop-footer-links a{
   color: #E34008;
   text-decoration: none;
+
 }
 
 /*---------MOBILE SIZING------------*/
@@ -276,7 +241,6 @@ a {
   .tour-main-text{
     display: flex;
     flex-direction: column;
-    /*flex-wrap: wrap;*/
     justify-content: center;
     text-align: center;
     margin: 0 auto;
@@ -358,6 +322,35 @@ a {
     height: 120px;
   }
 
+  .about-subhead {
+    font-size: 18px;
+    color: #E34008;
+  }
+
+  .about-footer {
+    width: 100vw;
+    height: 50px;
+    background: white;
+    -webkit-box-shadow: 0px -7px 25px -5px rgba(0,0,0,0.28);
+    -moz-box-shadow: 0px -7px 25px -5px rgba(0,0,0,0.28);
+    box-shadow: 0px -7px 25px -5px rgba(0,0,0,0.28);
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-footer img {
+    height: 40px;
+    padding: 5px;
+  }
+
+  .about-footer p {
+    color: #777879;
+  }
+
+  .about-footer a {
+    color: #777879;
+  }
+
 /*-------Tour Page Styles: Mobile-------*/
 
 .tourstop-main-photo{
@@ -395,7 +388,6 @@ a {
   text-align: center;
   color: #E34008;
   font-size: 25px;
-  /*padding-bottom: 0;*/
 }
 
 .tourstop-header-text p {
@@ -403,7 +395,6 @@ a {
   color: #777879;
   font-size: 15px;
   margin: 0;
-  /*padding-bottom: 0;*/
 }
 
 /*Tourify Icon*/
@@ -413,26 +404,16 @@ a {
 
 .tourstop-header-links p, .tourstop-header-links a {
   font-size: 16px;
-  /*margin: 10px;*/
 }
 
 .tour-start-button {
-  /* text-align: center; */
   font-size: 16px;
-  /*font-weight: 300;
-  letter-spacing: 2px;*/
   margin: 20px auto;
-  /*color: white;
-  background: #E34008;*/
   padding: 10px 10px;
   width: 160px;
-  /*border-radius: 50px;
-  border: none;*/
-  /*width: 400px;*/
 }
 
 .tour-map{
-  /*width: 100vh;*/
   height: 180px;
   overflow: hidden;
   background: lightgray;
@@ -445,38 +426,25 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /*align-items: center;*/
   margin: 10px 20px;
   height: 100px;
 }
 
-/*.tour-stop-link-box a {
-  color: black;
-}*/
-
 .tour-stop-image {
-  /*height: 100px;*/
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100px;
-  /*object-fit: cover;*/
-  /*object-position: center;*/
   background: #E34008;
-  /*overflow: hidden;*/
 }
 
 .tour-stop-image img {
-  /*object-position: center;*/
-  /*height: 100px;*/
-  /*width: 100%;*/
   object-fit: cover;
   width: 100px;
   height: 100px;
 }
 
 .tour-stop-text {
-  /*width: 70%;*/
   display: flex;
   flex-direction: column;
   background: lightgrey;
@@ -515,14 +483,8 @@ a {
 }
 
 .tourstop-travel-tip{
-  /*background-color: lightgrey;*/
   width: 100%;
   margin: 0 auto;
-  /*display: flex;
-  align-content: center;
-  justify-content: center;*/
-  /*padding: 15px;
-  line-height: 1.1;*/
 }
 
 .tourstop-travel-tip p{
@@ -534,7 +496,6 @@ a {
 
 .tourstop-map {
   margin-bottom: 100px;
-  /*border: 1px solid red;*/
 }
 
 .tourstop-footer-links{
@@ -542,8 +503,6 @@ a {
   margin: 20px auto;
   display: flex;
   justify-content: space-between;
-  /*margin-top: 20px;*/
-  /*margin-bottom: 20px;*/
   align-items: center;
   font-size: 18px;
   -webkit-box-shadow: 0px -7px 25px -5px rgba(0,0,0,0.28);
