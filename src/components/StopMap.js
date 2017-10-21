@@ -12,7 +12,7 @@ export default class StopMap extends React.Component {
   componentDidUpdate() {
     let map = new google.maps.Map(this.refs.map, {
       center: {lat: this.props.latFromParent, lng: this.props.longFromParent},
-      zoom: 19
+      zoom: 17
     });
 
     navigator.geolocation.getCurrentPosition(function (position) {
