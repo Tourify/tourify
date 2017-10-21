@@ -7,12 +7,12 @@ export default class About extends React.Component {
 
     return(
       <div>
-        <div className = 'tourstop-main-photo'>
+        <div className = 'header-photo'>
           <img className='about-main-photo' src = "https://durhamdill.files.wordpress.com/2017/10/team-tourify-web.jpg" alt = "Team Tourify"/>
         </div>
 
-        <div className = 'tourstop-body'>
-          <div className="tourstop-header-text">
+        <div className = 'content-area-container'>
+          <div className="header-text">
             <h1>ABOUT TOURIFY</h1>
           </div>
           <p>Tourify is an interactive tour experience that brings the culture and history of a city to life through interesting facts and photography. The idea came from the desire to transform a print guide into a digital format for the Durham Convention & Visitors Bureau.</p>

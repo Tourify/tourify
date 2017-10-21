@@ -37,15 +37,15 @@ export default class TourHome extends React.Component {
     })
     return(
       <div>
-        <div className = 'tourstop-main-photo'>
+        <div className = 'header-photo'>
           <img src = {this.state.tourInfo.main_tour_photo} alt = "current"/>
         </div>
-        <div className = "tourstop-header-text">
+        <div className = "header-text">
           <h1>{this.state.tourInfo.name}</h1>
           <p>{this.state.tourInfo.description}</p>
         </div>
 
-          <div className = "tourstop-header-links">
+          <div className = "header-links">
             <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-pin-100px.png" alt = "icon"/>
             <p> {this.state.numStops} stops | {this.state.tourInfo.distance} miles | {this.state.tourInfo.time_in_mins} mins</p>
           </div>
