@@ -24,6 +24,10 @@ a {
   text-decoration: none;
 }
 
+.invisible{
+  width: 28px;
+}
+
 /*Logo*/
   nav img{
     margin-top: 15px;
