@@ -49,7 +49,6 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /*border: 1px solid red;*/
     display: flex;
     flex-direction: column;
   }
@@ -82,6 +81,11 @@ a {
     font-style: italic;
     padding: 0 10px;
     font-weight: 300;
+  }
+
+  .tour-main-photo a {
+    color: white;
+    text-decoration: underline;
   }
 
   .select-a-tour{
@@ -144,6 +148,11 @@ a {
     color: #E34008;
   }
 
+  .about-para a {
+    color: #777879;
+    text-decoration: underline;
+  }
+
   .about-footer {
     width: 100vw;
     height: 50px;
@@ -179,6 +188,12 @@ a {
   background: gray;
 }
 
+.header-photo img {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+}
+
 .photo-change-btn{
   position: absolute;
   margin-left: 85vw;
@@ -199,11 +214,11 @@ a {
   cursor: pointer;
 }
 
-.header-photo img {
+/*.header-photo img {
   object-fit: cover;
   width: 100%;
   height: 180px;
-}
+}*/
 
 .header-text{
   width: 80vw;
@@ -523,7 +538,6 @@ a {
 
   .header-photo img {
     object-fit: cover;
-    object-position: 0 -250px;
     width: 100%;
     height: 300px;
   }
@@ -571,7 +585,6 @@ a {
 
   /*-----About Page Styles - Laptop/Desktop-----*/
   .about-main-photo {
-    /*position: relative;*/
-    /*top: 20px;*/
+    object-position: 0 -250px;
   }
 }
