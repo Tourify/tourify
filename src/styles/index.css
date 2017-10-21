@@ -58,6 +58,10 @@ a {
   outline: none;
 }
 
+.photo-change-btn:hover{
+  cursor: pointer;
+}
+
 .tourstop-header-text{
   width: 80vw;
   max-width: 800px;
