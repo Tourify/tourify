@@ -214,12 +214,6 @@ a {
   cursor: pointer;
 }
 
-/*.header-photo img {
-  object-fit: cover;
-  width: 100%;
-  height: 180px;
-}*/
-
 .header-text{
   width: 80vw;
   max-width: 800px;
