@@ -8,7 +8,7 @@ export default class About extends React.Component {
     return(
       <div>
         <div className = 'tourstop-main-photo'>
-          <img src = "https://durhamdill.files.wordpress.com/2017/10/team-tourify-web.jpg" alt = "Team Tourify"/>
+          <img className='about-main-photo' src = "https://durhamdill.files.wordpress.com/2017/10/team-tourify-web.jpg" alt = "Team Tourify"/>
         </div>
 
         <div className = 'tourstop-body'>
