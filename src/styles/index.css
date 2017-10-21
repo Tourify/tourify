@@ -149,6 +149,11 @@ a {
     color: #E34008;
   }
 
+  .about-para a {
+    color: #777879;
+    text-decoration: underline;
+  }
+
   .about-footer {
     width: 100vw;
     height: 50px;

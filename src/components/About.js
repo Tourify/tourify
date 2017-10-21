@@ -15,7 +15,7 @@ export default class About extends React.Component {
           <div className="header-text">
             <h1>ABOUT TOURIFY</h1>
           </div>
-          <p>Tourify is an interactive tour experience that brings the culture and history of a city to life through interesting facts and photography. The idea came from the desire to transform a print guide into a digital format for the Durham Convention & Visitors Bureau.</p>
+          <p className="about-para">Tourify is an interactive tour experience that brings the culture and history of a city to life through interesting facts and photography. The idea came from the desire to transform a print guide into a digital format for the <a href="https://www.durham-nc.com/" target="_blank">Durham Convention & Visitors Bureau</a>.</p>
 
           <h2 className="about-subhead">For Travelers & Explorers</h2>
           <p>Tour content is currently available for Durham, NC where we launched our project.</p>
