@@ -25,7 +25,16 @@ export default class TourHome extends React.Component {
   }
 
   render(){
-    console.log(this.state.tourInfo)
+    //  const latitude = this.state.tourInfo.stops[0].gps_lat
+    if (this.state.tourInfo.stops === undefined){
+      return ""
+    }
+    const lats = this.state.tourInfo.stops.map(function(stop){
+      return (stop.gps_lat)
+    })
+    const longs = this.state.tourInfo.stops.map(function(stop){
+      return (stop.gps_long)
+    })
     return(
       <div>
         <div className = 'tourstop-main-photo'>
@@ -41,7 +50,7 @@ export default class TourHome extends React.Component {
             <p> {this.state.numStops} stops | {this.state.tourInfo.distance} miles | {this.state.tourInfo.time_in_mins} mins</p>
           </div>
 
-          <div className= "tour-map"><Map/></div>
+          <div className= "tour-map"><Map latsFromParent = {lats} longsFromParent = {longs}/></div>
 
           <div className= "tour-list">
 
