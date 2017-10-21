@@ -9,8 +9,6 @@ export default class StopMap extends React.Component {
     this.componentDidUpdate = this.componentDidUpdate.bind(this);
   }
 
-
-
   componentDidUpdate() {
     let map = new google.maps.Map(this.refs.map, {
       center: {lat: this.props.latFromParent, lng: this.props.longFromParent},
@@ -25,11 +23,7 @@ export default class StopMap extends React.Component {
     markerOne.setMap(map);
   }
 
-
-  componentWillReceiveProps(){
-
-  }
-
+  componentWillReceiveProps(){}
 
   render() {
     console.log(this.props.datafromParent)
