@@ -1,8 +1,8 @@
+/*------GENERAL/MOBILE STYLES-------*/
 
 html, body{
   margin: 0;
   font-family: 'Lato', sans-serif;
-  /*min-width: 300px;*/
   height: 100%;
 }
 
@@ -24,7 +24,14 @@ a {
   text-decoration: none;
 }
 
-.tourstop-body{
+/*Logo*/
+  nav img{
+    margin-top: 15px;
+    width: 120px;
+  }
+
+/*General container settings for content areas*/
+.content-area-container{
   width: 80vw;
   max-width: 800px;
   margin: 0 auto;
@@ -34,200 +41,6 @@ a {
   font-weight: 300;
 }
 
-.tourstop-main-photo{
-  width: 100%;
-  height: 25vh;
-  margin-bottom: 40px;
-  overflow: hidden;
-  background: gray;
-}
-
-.photo-change-btn{
-  position: absolute;
-  margin-left: 85vw;
-  margin-top: 20vh;
-  background: #E34008;
-  border-radius: 50%;
-  border: none;
-  height: 50px;
-  width: 50px;
-  color: white;
-}
-
-.photo-change-btn:focus {
-  outline: none;
-}
-
-.tourstop-header-text{
-  width: 80vw;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.tourstop-header-text h1{
-  text-align: center;
-  color: #E34008;
-  font-size: 45px;
-  padding-bottom: 0;
-}
-
-.tourstop-header-text p {
-  text-align: center;
-  color: #777879;
-  font-size: 15px;
-  padding-bottom: 0;
-}
-
-.tourstop-header-links{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  color: #E34008;
-  width: 80vw;
-  max-width: 800px;
-}
-
-.tourstop-header-links img{
-  height: 100px;
-}
-
-.tourstop-header-links a{
-  color: #E34008;
-  text-decoration: none;
-  font-size: 35px;
-}
-
-.tourstop-travel-tip{
-  background-color: lightgrey;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  max-width: 800px;
-}
-
-.tourstop-travel-tip h2 {
-  font-size: 16px;
-  text-align: center;
-  color: #E34008;
-  margin: 10px;
-  letter-spacing: 5px;
-}
-.tourstop-travel-tip p{
-  font-size: 16px;
-}
-
-.tour-map{
-  width: 100%;
-  height: 25vh;
-  overflow: hidden;
-  background: lightgray;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-}
-
-.tour-list {
-  display: flex;
-  flex-direction: column;
-  min-width: 300px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.tour-list a {
-  color: white;
-}
-
-.tour-start-button {
-  font-size: 45px;
-  font-weight: 300;
-  letter-spacing: 2px;
-  margin: 40px auto;
-  color: white;
-  background: #E34008;
-  padding: 25px 40px;
-  border-radius: 50px;
-  border: none;
-  width: 400px;
-}
-
-.tour-stop-preview {
-  display: flex;
-  flex-direction: row;
-  margin: 20px 40px;
-  height: 250px;
-}
-
-
-.tour-stop-image img {
-  height: 250px;
-}
-
-.tour-stop-image {
-  height: 100%;
-  width: 25%;
-  background: #E34008;
-  overflow: hidden;
-}
-
-.tour-stop-text {
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  background: lightgrey;
-}
-
-.tour-stop-preview h1 {
-  color: #E34008;
-  font-size: 40px;
-  margin: 20px;
-}
-
-.tour-stop-description {
-  display: flex;
-  flex-direction: row;
-}
-
-
-.tour-stop-more {
-  color: #E34008;
-  width: 20%;
-}
-
-.tourstop-footer-links{
-  width: 80vw;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  align-items: center;
-  font-size: 35px;
-  position: fixed;
-  bottom: -23px;
-  background: white;
-}
-
-.tourstop-footer-links a{
-  color: #E34008;
-  text-decoration: none;
-
-}
-
-/*---------MOBILE SIZING------------*/
-@media screen and (min-width: 300px){
-
-/*Logo*/
-  nav img{
-    margin-top: 15px;
-    width: 120px;
-  }
-
   /*---------Home Page Styles: Mobile----------*/
 
   .tour-main-photo{
@@ -236,6 +49,9 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
   }
 
   .tour-main-text{
@@ -262,7 +78,6 @@ a {
   .tour-main-photo p{
     text-align: center;
     color: white;
-    margin-top: 35px;
     font-size: 14px;
     font-style: italic;
     padding: 0 10px;
@@ -353,9 +168,10 @@ a {
     color: #777879;
   }
 
-/*-------Tour Page Styles: Mobile-------*/
+/*-------Tour Home Page Styles: Mobile-------*/
 
-.tourstop-main-photo{
+/*General style for wide header image:*/
+.header-photo{
   width: 100%;
   height: 180px;
   margin-bottom: 10px;
@@ -375,61 +191,108 @@ a {
   color: white;
 }
 
-.tourstop-main-photo img {
+.photo-change-btn:focus {
+  outline: none;
+}
+
+.photo-change-btn:hover {
+  cursor: pointer;
+}
+
+.header-photo img {
   object-fit: cover;
   width: 100%;
   height: 180px;
 }
 
-.tourstop-header-text{
+.header-text{
   width: 80vw;
+  max-width: 800px;
   margin: 0 auto;
 }
 
-.tourstop-header-text h1{
+.header-text h1{
   text-align: center;
   color: #E34008;
   font-size: 25px;
+  padding-bottom: 0;
 }
 
-.tourstop-header-text p {
+.header-text p {
   text-align: center;
   color: #777879;
   font-size: 15px;
   margin: 0;
 }
 
+.header-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #E34008;
+  width: 80vw;
+  max-width: 800px;
+}
+
 /*Tourify Icon*/
-.tourstop-header-links img{
+.header-links img{
   height: 35px;
 }
 
-.tourstop-header-links p, .tourstop-header-links a {
+.header-links a {
+  color: #E34008;
+  text-decoration: none;
   font-size: 16px;
+}
+
+.tour-map{
+  width: 100%;
+  height: 180px;
+  background: lightgray;
+  margin-bottom: 130px;
+}
+
+/*parent container for list of stops on Tour Home page*/
+.tour-list {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .tour-start-button {
   font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 2px;
   margin: 20px auto;
-  padding: 10px 10px;
+  background: #E34008;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
   width: 160px;
 }
 
-.tour-map{
-  height: 180px;
-  overflow: hidden;
-  background: lightgray;
-  text-align: center;
+/*Text for START TOUR button*/
+.tour-list a {
   color: white;
-  font-size: 20px;
 }
 
+/*individual container for stop preview list*/
 .tour-stop-preview {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 10px 20px;
   height: 100px;
+}
+
+.tour-stop-preview h1 {
+  color: #E34008;
+  font-size: 16px;
+  margin: 10px;
 }
 
 .tour-stop-image {
@@ -447,15 +310,10 @@ a {
 }
 
 .tour-stop-text {
+  width: 75%;
   display: flex;
   flex-direction: column;
   background: lightgrey;
-}
-
-.tour-stop-preview h1 {
-  color: #E34008;
-  font-size: 16px;
-  margin: 10px;
 }
 
 .tour-stop-para {
@@ -469,24 +327,26 @@ a {
   /*width: 50%;*/
 }
 
-.tour-stop-more {
-  color: #E34008;
-  /*width: %;*/
-  text-align: right;
-  margin: 5px 10px;
-  text-decoration: none;
-  /*flex-wrap: nowrap;*/
-}
-
-/*-------Stop Page Styles--------*/
+/*-------Tour Stop Page Styles--------*/
 
 .tourstop-location {
   margin: 5px;
 }
 
 .tourstop-travel-tip{
-  width: 100%;
-  margin: 0 auto;
+  background-color: #E8E9E8;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.tourstop-travel-tip h2 {
+  font-size: 16px;
+  text-align: center;
+  color: #E34008;
+  margin: 10px;
+  letter-spacing: 5px;
 }
 
 .tourstop-travel-tip p{
@@ -498,24 +358,33 @@ a {
 
 .tourstop-map {
   margin-bottom: 100px;
+  /*overflow: hidden;*/
 }
 
 .tourstop-footer-links{
   width: 80vw;
+  max-width: 800px;
   margin: 20px auto;
+  padding: 10px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
+  position: fixed;
+  bottom: -23px;
+  background: white;
   -webkit-box-shadow: 0px -7px 25px -5px rgba(0,0,0,0.28);
   -moz-box-shadow: 0px -7px 25px -5px rgba(0,0,0,0.28);
   box-shadow: 0px -7px 25px -5px rgba(0,0,0,0.28);
 }
 
 .tourstop-footer-links img {
-  height: 50px;
+  height: 40px;
 }
 
+.tourstop-footer-links a{
+  color: #E34008;
+  text-decoration: none;
 }
 
 /*------------TABLET SIZING------------*/
@@ -534,8 +403,6 @@ a {
     .tour-item-coming{
       width: 150px;
       margin: 10px;
-      /*border: solid 1px transparent;
-      opacity: .5;*/
     }
 
     .tour-item-text p{
@@ -554,9 +421,9 @@ a {
       height: 150px;
     }
 
-    /*--------Tour Page Styles--------*/
+    /*--------Tour Home Page Styles: Tablet--------*/
 
-    .tourstop-main-photo{
+    .header-photo{
       width: 100%;
       height: 250px;
       margin-bottom: 10px;
@@ -564,44 +431,29 @@ a {
       background: gray;
     }
 
-    .tourstop-main-photo img {
+    .header-photo img {
       object-fit: cover;
       width: 100%;
       height: 250px;
     }
 
     .tour-map{
-      /*width: 100vh;*/
       height: 250px;
       overflow: hidden;
       background: lightgray;
       text-align: center;
       color: white;
       font-size: 20px;
+      margin-bottom: 10px;
     }
 
-    .tour-stop-para {
-      /*width: 75%;*/
-    }
-
-    .tour-stop-more {
-      /*width: 25%;*/
-    }
-    /*--------Stop Page Styles-------*/
+    /*--------Tour Stop Page Styles-------*/
     .photo-change-btn{
       position: absolute;
       margin-left: 85vw;
       margin-top: 225px;
-      /*background: #E34008;
-      border-radius: 50%;
-      border: none;
-      height: 50px;
-      width: 50px;
-      color: white;*/
     }
   }
-
-
 
 
 /*------LAPTOP-DESKTOP SIZING--------*/
@@ -624,8 +476,6 @@ a {
   .tour-item-coming{
     width: 200px;
     margin: 10px;
-    /*border: solid 1px transparent;
-    opacity: .5;*/
   }
 
   .tour-item-photo{
@@ -651,7 +501,7 @@ a {
 
 /*Tour description*/
   .tour-main-text h2{
-    font-size: 35px;
+    font-size: 30px;
     padding: 20px 40px;
   }
 
@@ -661,9 +511,9 @@ a {
     font-size: 18px;
   }
 
-  /*--------Tour Page Styles--------*/
+  /*--------Tour Home Page Styles--------*/
 
-  .tourstop-main-photo{
+  .header-photo{
     width: 100%;
     height: 300px;
     margin-bottom: 10px;
@@ -671,7 +521,7 @@ a {
     background: gray;
   }
 
-  .tourstop-main-photo img {
+  .header-photo img {
     object-fit: cover;
     object-position: 0 -250px;
     width: 100%;
@@ -688,14 +538,14 @@ a {
     font-size: 20px;
   }
 
-  .tourstop-header-text h1{
+  .header-text h1{
     text-align: center;
     color: #E34008;
     font-size: 30px;
     /*padding-bottom: 0;*/
   }
 
-  .tourstop-header-text p {
+  .header-text p {
     text-align: center;
     color: #777879;
     font-size: 18px;
@@ -704,39 +554,20 @@ a {
   }
 
   /*Tourify Icon*/
-  .tourstop-header-links img{
+  .header-links img{
     height: 45px;
   }
 
-  .tourstop-header-links p {
+  .header-links p {
     font-size: 18px;
   }
 
-  /*.tour-stop-para {
-    width: 90%;
-  }
-
-  .tour-stop-more {
-    color: #E34008;
-    width: 10%;
-  }*/
-
-  /*--------Stop Page Styles-------*/
+  /*--------Tour Stop Page Styles-------*/
   .photo-change-btn{
     position: absolute;
     margin-left: 85vw;
     margin-top: 275px;
-    /*background: #E34008;
-    border-radius: 50%;
-    border: none;
-    height: 50px;
-    width: 50px;
-    color: white;*/
   }
-
-  /*.tourstop-body-text {
-    max-width: 500px;
-  }*/
 
   /*-----About Page Styles - Laptop/Desktop-----*/
   .about-main-photo {
