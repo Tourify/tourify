@@ -79,7 +79,7 @@ export default class TourStop extends React.Component {
     return(
       <div>
 
-        <div className = 'tourstop-main-photo'>
+        <div className = 'header-photo'>
           {
             (this.state.stopSource === undefined || this.state.stopSource === null)
             ? ""
@@ -88,10 +88,10 @@ export default class TourStop extends React.Component {
           <img src = {this.state.currentSource} alt = "current"/>
         </div>
 
-        <div className = "tourstop-header-text">
+        <div className = "header-text">
           <h1>{this.state.tourInfo.stop_num}. {this.state.tourInfo.name}</h1>
         </div>
-        <div className = "tourstop-header-links">
+        <div className = "header-links">
           <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-pin-100px.png" alt = "icon"/>
           <p className="tourstop-location">{this.state.tourInfo.location}</p>
           {
@@ -100,8 +100,8 @@ export default class TourStop extends React.Component {
             : <p>| <a href = {this.state.tourInfo.learn_more_URL}>Website</a></p>
           }
         </div>
-        <div className = "tourstop-body">
-          <div className = "tourstop-body-text">
+        <div className = "content-area-container">
+          <div className = "content-area-container-text">
             <p>{this.state.tourInfo.description}</p>
           </div>
           {
