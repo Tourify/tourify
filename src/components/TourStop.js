@@ -131,8 +131,9 @@ goForward(e){
             <Link to={`/stop/${idForward}`}>
               <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow-right.png" alt = "right arrow" onClick={e => this.goForward(e)}/>
             </Link>
+            </div>
           </div>
-        </div>
+
         </div>
     )
   }
