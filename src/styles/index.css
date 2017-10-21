@@ -282,6 +282,11 @@ a {
     font-weight: 300;
   }
 
+  .tour-main-photo a {
+    color: white;
+    text-decoration: underline;
+  }
+
   .select-a-tour{
     color: #E34008;
     text-align: center;
@@ -340,6 +345,11 @@ a {
   .about-subhead {
     font-size: 18px;
     color: #E34008;
+  }
+
+  .about-para a {
+    color: #777879;
+    text-decoration: underline;
   }
 
   .about-footer {
