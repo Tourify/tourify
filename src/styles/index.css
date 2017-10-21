@@ -84,6 +84,11 @@ a {
     font-weight: 300;
   }
 
+  .tour-main-photo a {
+    color: white;
+    text-decoration: underline;
+  }
+
   .select-a-tour{
     color: #E34008;
     text-align: center;

@@ -30,7 +30,7 @@ export default class Home extends React.Component {
             <div><h1>{this.state.orgInfo.display_name}</h1></div>
             <div><h2>{this.state.orgInfo.description}</h2></div>
           </div>
-          <p>Content provided by Durham Convention & Visitors Bureau</p>
+          <p>Content provided by <a href="https://www.durham-nc.com/" target="_blank">Durham Convention & Visitors Bureau</a></p>
         </div>
 
         <div className = "select-a-tour">
@@ -49,7 +49,7 @@ export default class Home extends React.Component {
             </div>
             </Link>
           </div>
-      })}
+        })}
 
         <div className = "tour-item-coming">
           <div className = "tour-item-photo">

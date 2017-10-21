@@ -97,7 +97,7 @@ export default class TourStop extends React.Component {
           {
             (this.state.tourInfo.learn_more_URL === undefined || this.state.tourInfo.learn_more_URL === null)
             ? ""
-            : <p>| <a href = {this.state.tourInfo.learn_more_URL}>Website</a></p>
+            : <p>| <a href = {this.state.tourInfo.learn_more_URL} target="_blank">Website</a></p>
           }
         </div>
         <div className = "content-area-container">
