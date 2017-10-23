@@ -19,11 +19,11 @@ export default class About extends React.Component {
 
           <h2 className="about-subhead">For Travelers & Explorers</h2>
           <p>Tour content is currently available for Durham, NC where we launched our project.</p>
-          <p>Visit tourify.city to find available tours.</p>
+          <p className="about-para">Visit <Link to="/">tourify.city</Link> to find available tours.</p>
 
           <h2 className="about-subhead">For Content Creators</h2>
-          <p>Existing Content Creators can access and edit their tour info at tourify.city/admin.</p>
-          <p> If you are an organization that would like to add your own content contact us at X.</p>
+          <p className="about-para">Existing Content Creators can access and edit their tour content at the <a href="https://evening-retreat-85270.herokuapp.com/sessions/new" target="_blank">admin site</a>.</p>
+          <p className="about-para"> If you are an organization that would like to add your own content contact us at <a href="mailto:nowhere@mozilla.org">hello@tourify.city</a>.</p>
 
           <h2 className="about-subhead">Our Team</h2>
           <p>Katy, Hannah, Jared, Ginnie and Chris (pictured above, left to right) are cohort 11 graduates from The Iron Yard web development program. Our diverse group includes two former scientists, a teacher, a music industry rep, and a marketer.</p>
