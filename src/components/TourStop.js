@@ -74,7 +74,7 @@ export default class TourStop extends React.Component {
 
     const idBack = (parseInt(this.state.id, 10)-1)
     const idForward = (parseInt(this.state.id, 10)+1)
-    console.log(this.state.id);
+    console.log(this.state.tourInfo.length);
 
     return(
       <div>
