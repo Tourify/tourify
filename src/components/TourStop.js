@@ -120,7 +120,7 @@ export default class TourStop extends React.Component {
             <Link to={`/stop/${idBack}`} >
             {
               (parseInt(this.state.id, 10) <= 1)
-              ? ""
+              ? <div className = "invisible"></div>
               : <img src = "https://durhamdill.files.wordpress.com/2017/10/tourify-arrow.png" alt = "left arrow" onClick={e => this.goBack(e)}/>
             }
           </Link>
